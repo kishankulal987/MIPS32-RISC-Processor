@@ -359,3 +359,75 @@ MEM: if (cond) PC ← ALUout
 else PC ← NPC
 
 WB: Nothing
+---
+
+## 🔌 Datapath Design
+
+### Complete Single-Cycle Datapath Architecture
+
+The following diagram shows the complete datapath of the MIPS32 processor implementation:
+
+![Untitled Diagram](https://github.com/user-attachments/assets/ac33f1b9-6f2e-4a8c-b50b-1f03bc006baa)
+
+### Key Components
+
+- **PC (Program Counter)** — Holds the address of the current instruction
+- **Instruction Memory (IM)** — Stores the program instructions
+- **GPRs (General Purpose Registers)** — 32 registers for data storage
+- **ALU (Arithmetic Logic Unit)** — Performs arithmetic and logical operations
+- **dmem (Data Memory)** — Stores data for load/store operations
+- **Sign Extend** — Extends 16-bit immediate values to 32 bits
+- **Multiplexers** — Control signal routing based on instruction type
+- **Control Unit** — Generates control signals for datapath components
+
+### Datapath Flow
+
+1. **Instruction Fetch:** PC fetches instruction from Instruction Memory
+2. **Register Read:** Source registers (rs, rt) are read from GPRs
+3. **ALU Operation:** ALU performs computation based on instruction type
+4. **Memory Access:** Load/Store instructions access data memory
+5. **Write Back:** Results are written back to destination register
+
+---
+
+## 🧪 Simulation Results
+
+### Test Program: SWAP TEST (Compare & Swap)
+
+This test program demonstrates the compare-and-swap functionality by sorting two values in memory.
+
+#### Initial Setup
+
+**Registers:**
+- R1 = 10
+- R2 = 5
+
+**Memory:**
+- MEM[0] = 10
+- MEM[4] = 5
+
+#### Simulation Output
+
+<img width="608" height="721" alt="Screenshot 2026-01-15 101111" src="https://github.com/user-attachments/assets/886e4645-f8e3-4222-958d-955982e08c48" />
+<img width="575" height="628" alt="Screenshot 2026-01-15 101147" src="https://github.com/user-attachments/assets/f49f16a9-3b22-4ff0-9060-4a0f1a0a715b" />
+
+### Test Analysis
+## The testbench tests a sorting algorithm that compares two values in memory and swaps them if they are out of order, resulting in ascending sorted order.
+
+✅ **Test Result:** PASSED
+
+The simulation successfully demonstrates:
+- **Load/Store Operations** — Data correctly transferred between registers and memory
+- **ALU Operations** — Arithmetic and comparison operations executed properly
+- **Branch Logic** — Conditional branching based on SLT comparison
+- **Memory Sorting** — Values swapped correctly, resulting in ascending order (5, 10)
+
+### Performance Metrics
+
+- **Total Execution Time:** 145,000 ns
+- **Instructions Executed:** 18 instructions (PC=0 to PC=17)
+- **Clock Cycles:** 145 cycles (assuming 1000ns per cycle)
+- **Average CPI:** ~8.1 cycles per instruction (single-cycle datapath)
+
+---
+
