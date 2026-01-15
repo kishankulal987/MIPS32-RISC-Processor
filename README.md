@@ -28,6 +28,8 @@ We are not considering the whole processor, only a small subset with a limited n
 - Memory word size: **32 bits** (word-aligned)
 
 **What is word-aligned?**
+<img width="921" height="296" alt="Untitled Diagram drawio (1)" src="https://github.com/user-attachments/assets/af485cf3-2060-487f-aef2-b03d84086d59" />
+
 Each memory address points to one full word of data, not one byte. Word addressable memory means one address stores one complete word of data.
 
 ---
@@ -76,6 +78,9 @@ MIPS instructions can be classified as:
 
 ### 1️⃣ R-type Instruction Encoding
 
+<img width="1144" height="215" alt="image" src="https://github.com/user-attachments/assets/b5f7cd73-d0b1-48f2-bccd-54d75c933294" />
+
+
 **Example:** `ADD R1, R2, R3` (R-type instruction)
 
 **Opcode:** Tells what kind of operation it is (6 bits)
@@ -98,6 +103,7 @@ MIPS instructions can be classified as:
 = 05992800 (in hex)
 
 ### 2️⃣ I-type Instruction Encoding
+<img width="967" height="232" alt="image" src="https://github.com/user-attachments/assets/ead27e4c-f3e9-45de-bb8d-b17ed998cb77" />
 
 **Example:** `ADDI R1, R2, 50`
 - `R1` → destination register
@@ -133,6 +139,8 @@ MIPS instructions can be classified as:
 Offset value will be added to the PC and then the address of the next instruction is obtained.
 
 ### 3️⃣ J-type Instruction Encoding (Not Implemented)
+<img width="1041" height="175" alt="image" src="https://github.com/user-attachments/assets/199aa4f8-5034-4cc0-a0a1-109391bf068e" />
+
 
 Contains a 26-bit jump address field, extended to 28 bits by padding 2 zeros on the right.
 
