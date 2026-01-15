@@ -98,8 +98,11 @@ MIPS instructions can be classified as:
 | HLT         | 111111 (used to stop execution; not implemented in my design) |
 
 **Example:** `SUB R5, R12, R25`
+
 000001 01100 11001 00101 0000 000000
+
 -SUB- -R12- -R25- -R5- -not required-
+
 = 05992800 (in hex)
 
 ### 2️⃣ I-type Instruction Encoding
@@ -125,14 +128,18 @@ MIPS instructions can be classified as:
 **Example:** `LW R20, 84(R9)`
 
 001000 01001 10100 0000 000001010100
+
 --LW-- --R9- -R20- ------offset-------
+
 = 21340054 (in hex)
 
 
 **Example:** `BEQZ R25, Label`
 
 001110 11001 0000 yyyyyyyyyyyyyyy
+
 -BEQZ- -R25- -NR- ---offset------
+
 = 3b20yyyy (in hex)
 
 
