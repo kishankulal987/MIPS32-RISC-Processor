@@ -367,7 +367,7 @@ WB: Nothing
 
 The following diagram shows the complete datapath of the MIPS32 processor implementation:
 
-![Untitled Diagram](https://github.com/user-attachments/assets/ac33f1b9-6f2e-4a8c-b50b-1f03bc006baa)
+<img width="2041" height="1323" alt="Untitled design (2)" src="https://github.com/user-attachments/assets/451cfb02-1c40-4430-a089-66bd5dc6a7d6" />
 
 ### Key Components
 
