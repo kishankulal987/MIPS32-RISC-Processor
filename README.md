@@ -39,9 +39,11 @@ Each memory address points to one full word of data, not one byte. Word addressa
 ### 🔄 Load and Store Instructions
 
 **LW R2, 128(R8)**  
+
 Meaning: `R2 = MEM[R8 + 128]`
 
 **SW R5, -10(R25)**  
+
 Meaning: `MEM[R25 - 10] = R5`
 
 ### ➕ Arithmetic and Logical Instructions (Register Operands)
